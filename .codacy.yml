@@ -1,4 +1,5 @@
 ---
-metric:
-   exclude_paths:
-     - **
+engines:
+  metric:
+    exclude_paths:
+      - **
