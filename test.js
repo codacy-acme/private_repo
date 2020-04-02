@@ -36,6 +36,28 @@ exports.doSomething = function () {
         x = 1;
         return x;
         x = 3; // this will never execute
+        var bar = function (a, b, a) {
+            console.log("value of the second a:", a);
+            function foo1(a, b, a) {
+                typeof a === undefined
+                console.log("value of the second a:", a);
+                function foo1(a, b, a) {
+                    typeof a === undefined
+                    console.log("value of the second a:", a);
+                    function foo1(a, b, a) {
+                        typeof a === undefined
+                        console.log("value of the second a:", a);
+                        function foo1(a, b, a) {
+                            typeof a === undefined
+                            console.log("value of the second a:", a);
+                        }
+                        
+                    }
+                    
+                }
+                
+            }
+        };
     }
     
     (() => {
